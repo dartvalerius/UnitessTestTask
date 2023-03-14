@@ -23,7 +23,7 @@ public class User
     public string Salt { get; set; } = null!;
 
     /// <summary>
-    /// Роли
+    /// Роль
     /// </summary>
-    public IList<string> Roles { get; set; } = null!;
+    public string Role { get; set; } = null!;
 }

@@ -6,4 +6,16 @@
     <ImplicitUsings>enable</ImplicitUsings>
   </PropertyGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\JwtAuthentication.AspNetCore\JwtAuthentication.AspNetCore.csproj" />
+    <ProjectReference Include="..\UnitessTestTask.Core\UnitessTestTask.Core.csproj" />
+    <ProjectReference Include="..\UnitessTestTask.Infrastructure\UnitessTestTask.Infrastructure.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Update="UnitessTestDatabase.db">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+
 </Project>

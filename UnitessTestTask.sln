@@ -3,11 +3,13 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.5.33424.131
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UnitessTestTask.WebApi", "UnitessTestTask.WebApi\UnitessTestTask.WebApi.csproj", "{4FB8F017-3D7D-4941-A7DC-378919CB3F38}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "UnitessTestTask.WebApi", "UnitessTestTask.WebApi\UnitessTestTask.WebApi.csproj", "{4FB8F017-3D7D-4941-A7DC-378919CB3F38}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UnitessTestTask.Core", "UnitessTestTask.Core\UnitessTestTask.Core.csproj", "{2851669C-4B83-4828-8C68-D21ED6D76B2D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "UnitessTestTask.Core", "UnitessTestTask.Core\UnitessTestTask.Core.csproj", "{2851669C-4B83-4828-8C68-D21ED6D76B2D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UnitessTestTask.Infrastructure", "UnitessTestTask.Infrastructure\UnitessTestTask.Infrastructure.csproj", "{D3DA9011-B101-4FFA-AB0D-F5630A87BD32}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "UnitessTestTask.Infrastructure", "UnitessTestTask.Infrastructure\UnitessTestTask.Infrastructure.csproj", "{D3DA9011-B101-4FFA-AB0D-F5630A87BD32}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "JwtAuthentication.AspNetCore", "JwtAuthentication.AspNetCore\JwtAuthentication.AspNetCore.csproj", "{AFD4B529-A918-420B-923C-C0A3B5CA4AD9}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -27,6 +29,10 @@ Global
 		{D3DA9011-B101-4FFA-AB0D-F5630A87BD32}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D3DA9011-B101-4FFA-AB0D-F5630A87BD32}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D3DA9011-B101-4FFA-AB0D-F5630A87BD32}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AFD4B529-A918-420B-923C-C0A3B5CA4AD9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AFD4B529-A918-420B-923C-C0A3B5CA4AD9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AFD4B529-A918-420B-923C-C0A3B5CA4AD9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AFD4B529-A918-420B-923C-C0A3B5CA4AD9}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
