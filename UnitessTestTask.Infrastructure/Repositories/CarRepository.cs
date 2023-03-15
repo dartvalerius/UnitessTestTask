@@ -12,7 +12,7 @@ public class CarRepository : ICarRepository
 
     public CarRepository(DbContext dbContext) => _dbContext = dbContext;
 
-    public async Task<Car?> GetByIdAsync(Guid id)
+    public async Task<Car?> GetByIdAsync(string id)
     {
         using var connection = _dbContext.CreateConnection();
 
@@ -44,7 +44,7 @@ public class CarRepository : ICarRepository
         await connection.ExecuteAsync(CarQueries.Update, car);
     }
 
-    public async Task DeleteAsync(Guid id)
+    public async Task DeleteAsync(string id)
     {
         using var connection = _dbContext.CreateConnection();
 

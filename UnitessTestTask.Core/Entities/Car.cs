@@ -8,7 +8,7 @@ public class Car
     /// <summary>
     /// Идентификатор
     /// </summary>
-    public Guid Id { get; set; }
+    public string Id { get; set; }
 
     /// <summary>
     /// Марка

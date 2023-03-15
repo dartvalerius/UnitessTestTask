@@ -9,5 +9,5 @@ public interface IUserRepository : IGenericRepository<User>
     /// </summary>
     /// <param name="login">Логин</param>
     /// <returns>Пользователь</returns>
-    Task<User?> GetByLoginAsync(int login);
+    Task<User?> GetByLoginAsync(string login);
 }

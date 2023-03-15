@@ -12,7 +12,7 @@ public class UserRepository : IUserRepository
 
     public UserRepository(DbContext dbContext) => _dbContext = dbContext;
 
-    public async Task<User?> GetByIdAsync(Guid id)
+    public async Task<User?> GetByIdAsync(string id)
     {
         using var connection = _dbContext.CreateConnection();
 
@@ -44,14 +44,14 @@ public class UserRepository : IUserRepository
         await connection.ExecuteAsync(UserQueries.Update, user);
     }
 
-    public async Task DeleteAsync(Guid id)
+    public async Task DeleteAsync(string id)
     {
         using var connection = _dbContext.CreateConnection();
 
         await connection.ExecuteAsync(UserQueries.Delete, new { Id = id });
     }
 
-    public async Task<User?> GetByLoginAsync(int login)
+    public async Task<User?> GetByLoginAsync(string login)
     {
         using var connection = _dbContext.CreateConnection();
 
