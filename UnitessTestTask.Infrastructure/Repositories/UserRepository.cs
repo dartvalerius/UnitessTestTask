@@ -30,25 +30,25 @@ public class UserRepository : IUserRepository
         return result.ToList();
     }
 
-    public async Task AddAsync(User user)
+    public async Task<int> AddAsync(User user)
     {
         using var connection = _dbContext.CreateConnection();
 
-        await connection.ExecuteAsync(UserQueries.Add, user);
+        return await connection.ExecuteAsync(UserQueries.Add, user);
     }
 
-    public async Task UpdateAsync(User user)
+    public async Task<int> UpdateAsync(User user)
     {
         using var connection = _dbContext.CreateConnection();
 
-        await connection.ExecuteAsync(UserQueries.Update, user);
+        return await connection.ExecuteAsync(UserQueries.Update, user);
     }
 
-    public async Task DeleteAsync(string id)
+    public async Task<int> DeleteAsync(string id)
     {
         using var connection = _dbContext.CreateConnection();
 
-        await connection.ExecuteAsync(UserQueries.Delete, new { Id = id });
+        return await connection.ExecuteAsync(UserQueries.Delete, new { Id = id });
     }
 
     public async Task<User?> GetByLoginAsync(string login)

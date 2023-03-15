@@ -5,7 +5,7 @@ public class User
     /// <summary>
     /// Идентификатор
     /// </summary>
-    public string Id { get; set; }
+    public string? Id { get; set; }
 
     /// <summary>
     /// Логин

@@ -30,25 +30,25 @@ public class CarRepository : ICarRepository
         return result.ToList();
     }
 
-    public async Task AddAsync(Car car)
+    public async Task<int> AddAsync(Car car)
     {
         using var connection = _dbContext.CreateConnection();
 
-        await connection.ExecuteAsync(CarQueries.Add, car);
+        return await connection.ExecuteAsync(CarQueries.Add, car);
     }
 
-    public async Task UpdateAsync(Car car)
+    public async Task<int> UpdateAsync(Car car)
     {
         using var connection = _dbContext.CreateConnection();
 
-        await connection.ExecuteAsync(CarQueries.Update, car);
+        return await connection.ExecuteAsync(CarQueries.Update, car);
     }
 
-    public async Task DeleteAsync(string id)
+    public async Task<int> DeleteAsync(string id)
     {
         using var connection = _dbContext.CreateConnection();
 
-        await connection.ExecuteAsync(CarQueries.Delete, new { Id = id });
+        return await connection.ExecuteAsync(CarQueries.Delete, new { Id = id });
     }
 
     public async Task<IReadOnlyList<Car>> GetByLimitAsync(int skip, int count)

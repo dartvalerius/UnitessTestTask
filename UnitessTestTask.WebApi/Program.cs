@@ -1,4 +1,5 @@
 using JwtAuthentication.AspNetCore;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.OpenApi.Models;
 using System.Reflection;
@@ -89,6 +90,8 @@ builder.Services.AddCors(options =>
 });
 
 #endregion
+
+builder.Services.AddSingleton<IAuthorizationMiddlewareResultHandler, AuthorizationMiddlewareResultHandler>();
 
 var app = builder.Build();
 
